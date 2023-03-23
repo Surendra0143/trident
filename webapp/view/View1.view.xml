@@ -1,0 +1,188 @@
+<mvc:View controllerName="com.trident.weste.project1.controller.View1"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:ui="sap.ui.table">
+	<Page id="page" title="{i18n>title}">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:Form id="FormChangeColumn_threeGroups234" editable="true">
+					<!-- <f:layout >
+						<f:ColumnLayout columnsM="2" columnsL="3" columnsXL="4" />
+					</f:layout> -->
+					<f:layout>
+						<f:ResponsiveGridLayout labelSpanL="4" labelSpanM="2" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2" />
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer>
+							<f:formElements>
+								<f:FormElement label="{i18n>plant}">
+									<f:fields>
+										<Input id="id_Plant" showValueHelp="true" valueHelpRequest="onPlant" valueHelpOnly="true" required="true"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>secCode}">
+									<f:fields>
+										<Input id="id_sectionCode" showValueHelp="true" valueHelpRequest="onSectionCode" valueHelpOnly="true" required="true"/>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+						<f:FormContainer >
+							<f:formElements>
+								<f:FormElement label="{i18n>shift}">
+									<f:fields>
+										<Select forceSelection="false" items="{oShiftModel>/}" id="id_Shift">
+											<core:Item key="{oShiftModel>Shift}" text="{oShiftModel>Shift}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>date}">
+									<f:fields>
+										<DatePicker id="DP3" valueFormat="yyyy-MM-dd" change="handleChange" class="sapUiSmallMarginBottom"/>
+										<Button text="Submit" press="onPress" type="Emphasized">
+											<layoutData>
+												<f:ColumnElementData cellsSmall="3" cellsLarge="3" />
+											</layoutData>
+										</Button>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+						<!-- <f:FormContainer > -->
+							<!-- <f:formElements>
+								<f:FormElement label="Date">
+									<f:fields>
+										<DatePicker id="DP3" valueFormat="yyyy-MM-dd" change="handleChange" class="sapUiSmallMarginBottom"/>
+										<Button text="Submit" press="onPress" type="Emphasized">
+											<layoutData>
+												<f:ColumnElementData cellsSmall="3" cellsLarge="3" />
+											</layoutData>
+										</Button>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements> -->
+						<!-- </f:FormContainer> -->
+					</f:formContainers>
+				</f:Form>
+			</VBox>
+			<Toolbar>
+				<ToolbarSpacer />
+				<SearchField width="100%" search="filterGlobally" liveChange="filterGlobally"/>
+			</Toolbar>
+			<ui:Table id="idOrderDetialsTable" rows="{DetailModel>/}" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
+				<!-- <ui:extension>
+					<OverflowToolbar style="Clear">
+						<Title id="title" text="Table Items"/>
+					</OverflowToolbar>
+				</ui:extension> -->
+				<ui:columns>
+					<ui:Column >
+						<Label text="Material"/>
+						<ui:template>
+							<Text text="{DetailModel>Material}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Material Desc" />
+						<ui:template>
+							<Text text="{DetailModel>MaterialText}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Quantity" />
+						<ui:template>
+							<Input value="{DetailModel>ReqQuantity}" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Unit" />
+						<ui:template>
+							<Text text="{DetailModel>Unit}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Storage Location" />
+						<ui:template>
+							<Text text="{DetailModel>Storageloc}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Section Code" />
+						<ui:template>
+							<Text text="{DetailModel>SectionCode}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+				</ui:columns>
+			</ui:Table>
+			<OverflowToolbar id="otb1">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Button id="_IDGenButton1" text="Order details" type="Accept" press="onOrderDetails"/>
+				<!-- <Button id="_IDGenButton2" text="Print another Lot" type="Accept"/> -->
+			</OverflowToolbar>
+			<Toolbar>
+				<ToolbarSpacer />
+				<SearchField width="100%" />
+			</Toolbar>
+			<ui:Table id="p_idOrderDetialsTable" rows="{OrderDetailModel>/}" selectionMode="None" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
+				<!-- <ui:extension>
+					<OverflowToolbar style="Clear">
+						<Title id="title" text="Table Items"/>
+					</OverflowToolbar>
+				</ui:extension> -->
+				<ui:columns>
+					<ui:Column >
+						<Label text="By product material"/>
+						<ui:template>
+							<Text text="{OrderDetailModel>Material}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Production Order" />
+						<ui:template>
+							<Text text="{OrderDetailModel>ProductionOrder}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Material" />
+						<ui:template>
+							<Text text="{OrderDetailModel>BapiMaterial}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Material Description" />
+						<ui:template>
+							<Text text="{OrderDetailModel>BapiMaterialText}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="Posting Quantity" />
+						<ui:template>
+							<Text text="{OrderDetailModel>ReqQuantity}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+					<ui:Column >
+						<Label text="UoM" />
+						<ui:template>
+							<Text text="{OrderDetailModel>Unit}" wrapping="false" />
+						</ui:template>
+					</ui:Column>
+				</ui:columns>
+			</ui:Table>
+			<!-- <OverflowToolbar id="p_otb1">
+				<ToolbarSpacer id="p__IDGenToolbarSpacer1"/>
+				<Button id="p__IDGenButton1" text="Post" type="Accept" press="onPostDetails"/>
+				<Button id="p__IDGenButton2" text="Log" type="Ghost" press="onLogPress"/>
+			</OverflowToolbar> -->
+		</content>
+		<footer>
+			<OverflowToolbar id="p_otb1">
+				<ToolbarSpacer id="p__IDGenToolbarSpacer1"/>
+				<Button id="p__IDGenButton1" text="Post" type="Accept" press="onPostDetails"/>
+				<Button id="p__IDGenButton2" text="Log" type="Ghost" press="onLogPress"/>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,4 @@
+/* Enter your custom styles here */
+div[id*='FormChangeColumn_threeGroups234'] div h5 {   
+    display: none !important;
+}

@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog id="selectDialog" title="Products" liveChange="onValueHelpSearch" items="{PlantModel>/}" search=".onValueHelpSearch" confirm=".onValueHelpClose" cancel=".onValueHelpClose">
+        <StandardListItem  title="{PlantModel>Werks}" description="{PlantModel>Name1}" iconDensityAware="false" iconInset="false" />
+    </SelectDialog>
+</core:FragmentDefinition>

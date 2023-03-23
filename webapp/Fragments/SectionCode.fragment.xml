@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog id="sDialog" title="Section Code" liveChange="onSecCodeSearch" items="{secCodeModel>/}" search=".onSecCodeSearch" confirm=".onSecCodeClose" cancel=".onSecCodeClose">
+        <StandardListItem  title="{secCodeModel>SectionCode}" description="{secCodeModel>SectionDesc}" iconDensityAware="false" iconInset="false" />
+    </SelectDialog>
+</core:FragmentDefinition>

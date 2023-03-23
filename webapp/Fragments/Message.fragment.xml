@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Response">
+        <content>
+            <VBox items="{LogModel>/}">
+                <items>
+                    <ObjectStatus text="{LogModel>Message}" state="{path:'LogModel>MegType', formatter:'.formatter.onMsgFormat'}">
+                    </ObjectStatus>
+                </items>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Ok" press="closeDialog"></Button>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>
