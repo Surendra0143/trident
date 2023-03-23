@@ -1,0 +1,11 @@
+{
+  "componentname": "ehs.em.my.data.collects1",
+  "safeMode": true,
+  "appvariant": "mdc",
+  "layer": "CUSTOMER_BASE",
+  "sourceSystem": "TSD_110",
+  "isOVPApp": false,
+  "isFioriElement": true,
+  "environment": "ABAP",
+  "ui5Version": "1.96.6"
+}

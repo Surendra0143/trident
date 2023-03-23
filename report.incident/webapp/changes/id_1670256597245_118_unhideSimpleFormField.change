@@ -1,0 +1,43 @@
+{
+	"fileName": "id_1670256597245_118_unhideSimpleFormField",
+	"fileType": "change",
+	"changeType": "unhideSimpleFormField",
+	"moduleName": "",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"elementSelector": {
+			"id": "createIncident--idLabelIncidentLocation",
+			"idIsLocal": true
+		}
+	},
+	"selector": {
+		"id": "createIncident--newIncidentForm",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T16:10:01.914Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1670256597246_119_composite",
+		"command": "reveal"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"elementSelector": {
+			"id": "createIncident--idLabelIncidentLocation",
+			"idIsLocal": true
+		}
+	},
+	"jsOnly": true,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

@@ -1,0 +1,50 @@
+{
+	"fileName": "id_1670255412073_231_addSimpleFormField",
+	"fileType": "change",
+	"changeType": "addSimpleFormField",
+	"moduleName": "",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"bindingPath": "IncidentStatus",
+		"newFieldSelector": {
+			"id": "createIncident--newIncidentForm_Incident_IncidentStatus",
+			"idIsLocal": true
+		},
+		"newFieldIndex": 0,
+		"modelType": "sap.ui.model.odata.v2.ODataModel"
+	},
+	"selector": {
+		"id": "createIncident--newIncidentForm",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T15:50:13.058Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1670255412066_228_composite",
+		"command": "addDelegateProperty"
+	},
+	"oDataInformation": {
+		"oDataServiceUri": "/sap/opu/odata/sap/EHS_INC_REPORTINCIDENT_SRV/",
+		"propertyName": "IncidentStatus",
+		"entityType": "Incident"
+	},
+	"dependentSelector": {
+		"targetContainerHeader": {
+			"id": "createIncident--id-1670255175674-139",
+			"idIsLocal": true
+		}
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

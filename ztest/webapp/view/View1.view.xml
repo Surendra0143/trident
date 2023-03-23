@@ -1,0 +1,118 @@
+
+<mvc:View controllerName="ztest.controller.View1" xmlns:mvc="sap.ui.core.mvc"  xmlns:t="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Machine wise rework confirmation - CSP" class="sapUiSizeCompact">
+					<customHeader>
+						<Bar class="header">
+							<contentMiddle>
+								<Label wrapping="true" text="Machine wise rework confirmation - CSP"/>
+							</contentMiddle>
+						</Bar>
+					</customHeader>
+					<content>
+						<f:SimpleForm id="SimpleFormChangeBank1" editable="true" layout="ResponsiveGridLayout"  labelSpanXL="3" labelSpanL="3"
+							labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+							columnsL="2" columnsM="2" singleContainerFullSize="false">
+							<f:content>
+								<core:Title/>
+								<Label text="Plant"/>
+								<MultiInput/>
+								<Label text="Shift"/>
+								<Input/>
+								<Label text="Production Date"/>
+								<Input/>
+								<Label text="Program name"/>
+								<Input/>
+								<Label text="Lot no"/>
+								<Input/>
+								<core:Title/>
+								<Label text="Size"/>
+								<Input/>
+								<Label text="Shade code"/>
+								<Input/>
+								<Label text="Material code"/>
+								<Input/>
+								<Label text="Customer Code"/>
+								<Input/>
+								<Label text="Supervisor"/>
+								<Input/>
+								<core:Title/>
+							</f:content>
+						</f:SimpleForm>
+       <f:SimpleForm id="SimpleFormChangeBank2" editable="true" layout="ResponsiveGridLayout"  labelSpanXL="3" labelSpanL="3"
+							labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+							columnsL="2" columnsM="2" singleContainerFullSize="false">
+							<f:content>
+								<core:Title/>
+								<Label text="Rework Production order"/>
+								<Input/>
+								<Label text="Rework order qty"/>
+								<Input/>
+								<Label text="Balance rework order qty"/>
+								<Input/>
+								<Label text="Lot no"/>
+								<Input/>
+								<core:Title/>	
+								<Label></Label>
+								<Button text ="Lot Detail"/>
+							</f:content>
+						</f:SimpleForm> 
+
+ <t:Table  rows="" selectionMode="Single" visibleRowCountMode="Interactive" paste="onPaste" ariaLabelledBy="title">
+						 <t:columns>
+						<t:Column width="9rem">
+								<Label text="Reason for rejection"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							<t:Column width="9rem">
+								<Label text="Total rejection(PC)"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							<t:Column width="9rem">
+								<Label text="Balance qty"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							<t:Column width="9rem">
+								<Label text="Conf qfy(pc)"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							<t:Column width="9rem">
+								<Label text="Work center"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							<t:Column width="9rem">
+								<Label text="W/C description"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column>
+							
+							<t:Column width="9rem">
+								<Label text="Team No"/>
+								<t:template>
+									<Text text=""/>
+								</t:template>
+							</t:Column> 
+						</t:columns>
+					</t:Table> 
+
+					</content>
+					
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>  

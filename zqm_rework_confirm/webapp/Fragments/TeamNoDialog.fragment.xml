@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="oTeamNoDialog" title="{i18n>TeamNo}({TeamNo>/length})" items="{TeamNo>/}" search=".onTeamNoSearch" confirm=".onTeamNoClose" cancel=".onTeamNoClose">
+        <StandardListItem id="OTeamNo" title="{TeamNo>TeamNo}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

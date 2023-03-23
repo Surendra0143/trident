@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="osupervisorDialog" title="{i18n>superWiser}({SupervisorDetails>/length})" items="{SupervisorDetails>/}" search=".onSupervisorSearch" confirm=".onSupervisorClose" cancel=".onSupervisorClose">
+        <StandardListItem id="OSupervisor" title="{SupervisorDetails>PersonNumber}" description="{SupervisorDetails>PersonName}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

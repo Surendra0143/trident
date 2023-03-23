@@ -1,0 +1,36 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns:sfi="sap.ui.comp.smartfield"
+	xmlns:sfo="sap.ui.comp.smartform" xmlns:table="sap.ui.table" xmlns:f="sap.ui.layout.form"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1" xmlns:uxap="sap.uxap" xmlns="sap.m">
+	<f:Form id="FormDisplay" editable="false">
+		<f:layout>
+			<f:ResponsiveGridLayout id="reportFileGrid" labelSpanXL="1" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false"
+				emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+		</f:layout>
+		<f:formContainers>
+			<f:FormContainer id="reportFileFormContainer">
+				<f:formElements>
+					<f:FormElement id="fileNameFormElem" label="{i18n>lblFileName}">
+						<f:fields>
+							<Link id="idLinkObjectPageFile" text="{EHSReportFile}" press="onFileNameClick"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement id="generatedOnFormElem" label="{i18n>lblGeneratedOn}">
+						<f:fields>
+							<Text id="idGeneratedOn" text="{EHSFileGenerationDateTimeText}"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement id="statusFormElem" label="{i18n>lblStatus}">
+						<f:fields>
+							<Text id="idReportStatus" text="{EHSReportStatusText}"/>
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>

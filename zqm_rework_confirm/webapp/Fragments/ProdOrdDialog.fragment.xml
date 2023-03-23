@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="oProdOrdDialog" title="{i18n>reworkpo}({ProdOrdDetails>/length})" items="{ProdOrdDetails>/}" search=".onProdOrdSearch" confirm=".onProdOrdClose" cancel=".onProdOrdClose">
+        <StandardListItem id="OProdOrd" title="{ProdOrdDetails>OrderNo}" description="{ProdOrdDetails>Material}" info="{ProdOrdDetails>MaterialDesc}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

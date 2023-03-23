@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="oWorkCtrDialog" title="{i18n>WorkCtr}({WorkCenter>/length})" items="{WorkCenter>/}" search=".onWorkCtrSearch" confirm=".onWorkCtrClose" cancel=".onWorkCtrClose">
+        <StandardListItem id="OWorkCtr" title="{WorkCenter>WorkCenter}" description="{WorkCenter>WorkCenterDesc}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

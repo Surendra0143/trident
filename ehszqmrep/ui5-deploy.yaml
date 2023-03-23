@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: ehszqmrep
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: TSD_110
+          url: http://TSD:8012
+        app:
+          name: ZEHS_SMR_REP
+          description: Summary Report
+          package: ZFIORI
+          transport: TSDK902302

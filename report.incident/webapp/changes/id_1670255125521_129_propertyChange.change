@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1670255125521_129_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"moduleName": "",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"property": "level",
+		"newValue": "H2"
+	},
+	"selector": {
+		"id": "createIncident--id-1669883735773-105",
+		"type": "sap.ui.core.Title",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T15:45:31.051Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "property"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

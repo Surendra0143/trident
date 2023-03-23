@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="openDialog" title="Print Lot">
+        <!-- <Label text="Product" labelFor="productInput" id="frgLabel"/> -->
+        <Input id="productInput" placeholder="Please Enter the LotNo" />
+        <beginButton>
+            <Button id="_IDGenButton517" text="Ok" press=".closeDialog"/>
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>

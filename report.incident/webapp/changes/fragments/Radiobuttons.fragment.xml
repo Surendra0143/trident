@@ -1,0 +1,9 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m'>
+    <!--  add your xml here -->
+    <Label text="Error" labelFor="groupC" />
+    <RadioButtonGroup id="groupC" valueState="Error">
+        <RadioButton text="Option 1" selected="true" />
+        <RadioButton text="Option 2" />
+    </RadioButtonGroup>
+</core:FragmentDefinition>

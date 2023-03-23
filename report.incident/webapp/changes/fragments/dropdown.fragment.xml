@@ -1,0 +1,24 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m'  xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartMultiInput="sap.ui.comp.smartmultiinput"
+		   xmlns:smartTable="sap.ui.comp.smarttable"  xmlns:html="http://www.w3.org/1999/xhtml"
+		   xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+		   xmlns:f="sap.ui.layout.form">
+    <!--  add your xml here -->
+    <!-- <Select enabled="true" editable="true" forceSelection="false" selectedKey="First" items="">
+        <core:Item key="First" text="First"/>
+		<core:Item key="Second" text="Second"/>
+    </Select> -->
+    <smartForm:SmartForm id="idSmartForm" editable="true"
+						 title="Smart Multi Input Fields Bound to Different Products" editTogglable="true">
+		<smartForm:layout>
+			<smartForm:Layout emptySpanM="3" emptySpanL="3"/>
+		</smartForm:layout>
+		<smartForm:Group>
+			
+			<smartForm:GroupElement>
+				<smartMultiInput:SmartMultiInput id="idSmartMultiInput5" textLabel="Categories/Description for /Products('1')" value="{}"/>
+			</smartForm:GroupElement>
+
+		</smartForm:Group>
+	</smartForm:SmartForm>
+</core:FragmentDefinition>

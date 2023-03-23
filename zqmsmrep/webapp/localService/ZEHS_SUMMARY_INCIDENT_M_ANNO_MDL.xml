@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zehs_summary_incident_mgmt_srv/$metadata">
+        <edmx:Include Namespace="ZEHS_SUMMARY_INCIDENT_MGMT_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zehs_summary_incident_m_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/EHSLocationUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/EHSLocationName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/EHSLocationIDAndName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/EHSLocationType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/GeographicalLocationLatitude">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType/GeographicalLocationLongitude">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSLocationName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSLocationNameFreeSrch">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/ActiveUUID">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/DraftEntityCreationDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/DraftEntityLastChangeDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/to_SummaryReportRootTP">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/Generate_report_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/Preparation_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/Validation_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/NAICSCode_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/OrganizationalUnit_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/ReasonForChangeText_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/SmmryRptEstablishmentSizeCode_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/SmmryRptEstablishmentTypeCode_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/SmmryRptIndustryDescription_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSLocationUUID">
+                <Annotation Term="Common.Text" Path="EHSLocationName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType">
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportCriteriaFieldsReportNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportFromDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportToDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSLocationUUID"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OrganizationalUnit"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportDetailsFieldsReportNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="NAICSCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SmmryRptIndustryDescription"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReasonForChangeText"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SmmryRptEstablishmentSizeCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SmmryRptEstablishmentTypeCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EHSLocationUUID</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSFormDescription">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/SummaryReportRootStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSReportStatusText">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Language">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.Text" Path="LanguageName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/LanguageName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations/>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSLocationName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSLocationNameFreeSrch">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSReportFromDate">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSReportToDate">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/ActiveUUID">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/DraftEntityCreationDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/DraftEntityLastChangeDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/to_SummaryReportReportTP">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/SummaryReportRootUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/SummaryReportReportUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/CreationUTCDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSFileGenerationDateTimeText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Activation_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Edit_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Preparation_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Validation_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Language_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSFormName">
+                <Annotation Term="Common.Text" Path="EHSFormDescription">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSLocationUUID">
+                <Annotation Term="Common.Text" Path="EHSLocationName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/LocHasChildLocationsSelected"/>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Reporting Criteria"/>
+                            <PropertyValue Property="ID" String="ReportingCriteriaCollection"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Reporting Criteria"/>
+                                        <PropertyValue Property="ID" String="ReportCriteriaFieldsReportNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="to_SummaryReportReportTP/@UI.FieldGroup#ReportCriteriaFieldsReportNode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Report Details"/>
+                            <PropertyValue Property="ID" String="ReportDetailsCollection"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="ReportDetailsFieldsReportNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="to_SummaryReportReportTP/@UI.FieldGroup#ReportDetailsFieldsReportNode"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="ReportDetailsFieldsRootNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ReportDetailsFieldsRootNode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportCriteriaFieldsReportNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportFromDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportToDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSLocationUUID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportDetailsFieldsRootNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Language"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Report"/>
+                        <PropertyValue Property="TypeNamePlural" String="Reports"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="EHSFormDescription"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Value" Path="EHSLocationName"/>
+                            <PropertyValue Property="Url" Path="EHSLocationURL"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSReportFromDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSReportToDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSFormName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="CreationUTCDateTime"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EHSLocationUUID</PropertyPath>
+                        <PropertyPath>LocHasChildLocationsSelected</PropertyPath>
+                        <PropertyPath>EHSFormName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftEntityType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftAccessType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/ProcessingStartDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftIsKeptByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/EnqueueStartDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftIsCreatedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftIsLastChangedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/DraftIsProcessedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/CreatedByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/LastChangedByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType/InProcessByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSFormDescription">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/SummaryReportRootStatus">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSReportStatusText">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/Language">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.Text" Path="LanguageName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/LanguageName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSLocationName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSLocationNameFreeSrch">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSReportFromDate">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSReportToDate">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/to_SummaryReportReportTP">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/SummaryReportRootUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/SummaryReportReportUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/CreationUTCDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSFileGenerationDateTimeText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/Language_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSFormName">
+                <Annotation Term="Common.Text" Path="EHSFormDescription">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSLocationUUID">
+                <Annotation Term="Common.Text" Path="EHSLocationName">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/LocHasChildLocationsSelected"/>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Reporting Criteria"/>
+                            <PropertyValue Property="ID" String="ReportingCriteriaCollection"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Reporting Criteria"/>
+                                        <PropertyValue Property="ID" String="ReportCriteriaFieldsReportNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="to_SummaryReportReportTP/@UI.FieldGroup#ReportCriteriaFieldsReportNode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Report Details"/>
+                            <PropertyValue Property="ID" String="ReportDetailsCollection"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="ReportDetailsFieldsReportNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="to_SummaryReportReportTP/@UI.FieldGroup#ReportDetailsFieldsReportNode"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="ReportDetailsFieldsRootNode"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ReportDetailsFieldsRootNode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportCriteriaFieldsReportNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportFromDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSReportToDate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="EHSLocationUUID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReportDetailsFieldsRootNode">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Language"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Report"/>
+                        <PropertyValue Property="TypeNamePlural" String="Reports"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="EHSFormDescription"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Value" Path="EHSLocationName"/>
+                            <PropertyValue Property="Url" Path="EHSLocationURL"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSReportFromDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSReportToDate"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EHSFormName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="CreationUTCDateTime"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>EHSLocationUUID</PropertyPath>
+                        <PropertyPath>LocHasChildLocationsSelected</PropertyPath>
+                        <PropertyPath>EHSFormName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

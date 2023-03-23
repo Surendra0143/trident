@@ -1,0 +1,88 @@
+<mvc:View controllerName="com.sap.firstpiece.zqmfirstpiece.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" adjustLabelSpan="false" columnsM="2" columnsL="3" columnsXL="4" singleContainerFullSize="false">
+                    <f:content>
+                        <core:Title id="_IDGenTitle1" />
+                        <Label id="_IDGenLabel1" text="{i18n>lotNo}" required="true" />
+                        <Input id="_IDGenInput1" value="{formModel>/Lotno}" change="onLotNum" maxLength="12" />
+                        <Label id="_IDGenLabel2" text="{i18n>date}" />
+                        <DatePicker id="_IDGenDatePicker1" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd" editable="false" />
+                        <Label id="_IDGenLabel3" text="{i18n>plant}" required="true"/>
+                        <Input id="_IDGenInput3" value="{AfterSelModel>/FpiPlant}" maxLength="4" />
+                        <Label id="_IDGenLabel4" text="{i18n>shift}" required="true"/>
+                        <Select id="_IDGenSelect1" forceSelection="false" items="{ShiftModel>/}">
+                            <core:Item id="_IDGenItem1" key="{ShiftModel>shift}" text="{ShiftModel>shift}" />
+                        </Select>
+                        <Label id="_IDGenLabel5" text="{i18n>programName}" />
+                        <Input id="_IDGenInput5" value="{AfterSelModel>/Prgrm}" editable="false" />
+                        <Label id="_IDGenLabel6" text="{i18n>threadNo}" required="true"/>
+                        <Input id="_IDGenInput6" value="{formModel>/Thread}" maxLength="18" />
+                        <Label id="_IDGenLabel7" text="{i18n>workCenter}" required="true"/>
+                        <Input id="_IDGenInput7" value="{formModel>/Arbpl}" showValueHelp="true" maxLength="6" valueHelpOnly="true" valueHelpRequest="onWorkCenter" />
+                        <Label id="_IDGenLabel31" text="{i18n>otherInstruction}" required="true"/>
+                        <Input id="_IDGenInput31" value="{formModel>/OthIns}" maxLength="40" />
+                        <core:Title id="_IDGenTitle2" />
+                        <Label id="_IDGenLabel8" text="{i18n>salesOrder}" required="true"/>
+                        <Input id="_IDGenInput8" value="{formModel>/FpiVbeln}" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="onSalesOrder" maxLength="10" />
+                        <Input id="_IDGenInput23" value="{formModel>/FpiVbelp}" maxLength="6">
+                            <layoutData>
+                                <l:GridData id="_IDGenGridData1" span="XL1 L2 M2 S4" />
+                            </layoutData>
+                        </Input>
+                        <Label id="_IDGenLabel9" text="{i18n>shadeCode}" />
+                        <Input id="_IDGenInput9" value="{AfterSelModel>/Shade}" editable="false" />
+                        <Label id="_IDGenLabel10" text="{i18n>customer}" />
+                        <Input id="_IDGenInput10" value="{AfterSelModel>/FpiCustomer}" editable="false" />
+                        <Label id="_IDGenLabel11" text="{i18n>STDWeight}" />
+                        <Input id="_IDGenInput11" value="{AfterSelModel>/StdWeight}" editable="false" />
+                        <Label id="_IDGenLabel12" text="{i18n>STDSize}" />
+                        <Input id="_IDGenInput12" value="{AfterSelModel>/StdLen}" placeholder="{i18n>length}" editable="false" />
+                        <Input id="_IDGenInput21" value="{AfterSelModel>/StdWdth}" placeholder="{i18n>width}" editable="false" />
+                        <Label id="_IDGenLabel13" text="{i18n>actualWeight}" required="true"/>
+                        <Input id="_IDGenInput13" value="{formModel>/ActWeight}" change="onWeightChange" type="Number" maxLength="13" />
+                        <Label id="_IDGenLabel14" text="{i18n>actualSize}" required="true"/>
+                        <Input id="_IDGenInput14" value="{formModel>/ActLen}" placeholder="{i18n>length}" type="Number" change="onLenChange" maxLength="13" />
+                        <Input id="_IDGenInput22" value="{formModel>/ActWdth}" placeholder="{i18n>width}" type="Number" change="onWdthChange" maxLength="13" />
+                        <Label id="id_serialNol" text="{i18n>serNo}" required="true"/>
+                        <Input id="id_serialNoI" value="{formModel>/Ktextlos}" maxLength="40" />
+                        <core:Title id="_IDGenTitle3" />
+                        <Label id="_IDGenLabel15" text="{i18n>fold}" required="true"/>
+                        <Input id="_IDGenInput15" value="{formModel>/Fold}" maxLength="10" />
+                        <Label id="_IDGenLabel16" text="{i18n>trimPlacement}" required="true"/>
+                        <Input id="_IDGenInput16" value="{formModel>/TrimPlcmnt}" maxLength="10" />
+                        <Label id="_IDGenLabel17" text="{i18n>operatorLeaderCode}" required="true"/>
+                        <Input id="_IDGenInput17" value="{formModel>/OperCode}" showValueHelp="true" maxLength="8" valueHelpRequest="onOprLeaderCode" />
+                        <Label id="_IDGenLabel18" text="{i18n>approvedbyQACode}" required="true"/>
+                        <Input id="_IDGenInput18" value="{formModel>/ApprBy}" showValueHelp="true" maxLength="8" valueHelpRequest="onQACode" />
+                        <Label id="_IDGenLabel19" text="{i18n>machineNo}" required="true"/>
+                        <Input id="_IDGenInput19" value="{formModel>/Machine}" maxLength="10" />
+                        <Label id="_IDGenLabel20" text="{i18n>crowdingat4Corner}" required="true"/>
+                        <Select id="_IDGenSelect2" forceSelection="false" items="{Crow4Model>/}">
+                            <core:Item id="_IDGenItem2" key="{Crow4Model>crowding4}" text="{Crow4Model>crowding4}" />
+                        </Select>
+                        <Label id="_IDGenLabel21" text="{i18n>resultApproved}" required="true"/>
+                        <Select id="_IDGenSelect3" forceSelection="false" items="{ResltApvlModel>/}">
+                            <core:Item id="_IDGenItem3" key="{ResltApvlModel>resultApproval}" text="{ResltApvlModel>resultApproval}" />
+                        </Select>
+                    </f:content>
+                </f:SimpleForm>
+                <Label id="id_remarksl" text="{i18n>remarks}" required="true"/>
+                <Input id="id_remarksI" value="{formModel>/Zremark}" maxLength="200" />
+            </VBox>
+            <!-- <VBox id="_IDGenVBox2" class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormChange480_Trial1" editable="true" layout="ResponsiveGridLayout" columnsM="1" columnsL="1" columnsXL="1" adjustLabelSpan="false" singleContainerFullSize="false">
+                    <f:content>
+                        
+                    </f:content>
+                </f:SimpleForm>
+            </VBox> -->
+            <OverflowToolbar id="otb1">
+                <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                <Button id="_IDGenButton1" text="{i18n>saveandPrint}" type="Accept" press="onSave" />
+                <Button id="_IDGenButton2" text="{i18n>printAnotherLot}" type="Accept" press="onPrintAnotherLot" />
+            </OverflowToolbar>
+        </content>
+    </Page>
+</mvc:View>

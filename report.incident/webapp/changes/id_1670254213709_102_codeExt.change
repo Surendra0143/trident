@@ -1,0 +1,34 @@
+{
+	"fileName": "id_1670254213709_102_codeExt",
+	"fileType": "change",
+	"changeType": "codeExt",
+	"moduleName": "customer/report/incident/changes/coding/dropdown",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"codeRef": "coding/dropdown.js"
+	},
+	"selector": {
+		"controllerName": "ehs.inc.reportincidents1.controller.CreateIncident"
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T15:30:13.713Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

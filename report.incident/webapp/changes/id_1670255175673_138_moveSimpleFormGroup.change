@@ -1,0 +1,59 @@
+{
+	"fileName": "id_1670255175673_138_moveSimpleFormGroup",
+	"fileType": "change",
+	"changeType": "moveSimpleFormGroup",
+	"moduleName": "",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"targetSelector": {
+			"id": "createIncident--newIncidentForm",
+			"idIsLocal": true
+		},
+		"movedElements": [{
+			"elementSelector": {
+				"id": "createIncident--id-1669883735773-105",
+				"idIsLocal": true
+			},
+			"source": {
+				"groupIndex": 1
+			},
+			"target": {
+				"groupIndex": 0
+			}
+		}],
+		"newControlId": {
+			"id": "createIncident--id-1670255175674-139",
+			"idIsLocal": true
+		}
+	},
+	"selector": {
+		"id": "createIncident--newIncidentForm",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T15:46:16.400Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "move"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"movedElements": [{
+			"id": "createIncident--id-1669883735773-105",
+			"idIsLocal": true
+		}]
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

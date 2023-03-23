@@ -1,0 +1,51 @@
+{
+    "welcomeFile": "index.html",
+    "routes": [
+      {
+        "path": "/sap/opu/odata",
+        "target": {
+          "type": "destination",
+          "name": "TSD",
+          "entryPath": "/sap/opu/odata"
+        },
+        "description": "TSD"
+      },
+      {
+        "path": "/sap/bc/ui5_ui5",
+        "target": {
+          "type": "destination",
+          "name": "TSD",
+          "entryPath": "/sap/bc/ui5_ui5"
+        },
+        "description": "TSD"
+      },
+      {
+        "path": "/resources",
+        "target": {
+          "type": "service",
+          "name": "sapui5",
+          "entryPath": "/resources"
+        },
+        "description": "SAPUI5 Resources"
+      },
+      {
+        "path": "/test-resources",
+        "target": {
+          "type": "service",
+          "name": "sapui5",
+          "entryPath": "/test-resources"
+        },
+        "description": "SAPUI5 Test Resources"
+      },
+      {
+        "path": "/resources/ehs/fnd/task/reuselib",
+        "target": {
+          "type": "destination",
+          "name": "TSD",
+          "entryPath": "/sap/bc/ui5_ui5/sap/ehstask_libs1",
+          "preferLocal": true
+        },
+        "description": "ehs/fnd/task/reuselib Reuse Library"
+      }
+    ]
+  }

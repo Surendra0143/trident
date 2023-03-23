@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="WCDialog" title="Work Center" items="{WCModel>/}" search=".onWCValueHelpSearch" confirm=".onWCValueHelpClose" cancel=".onWCValueHelpClose">
+        <StandardListItem id="_IDGenStandardListItemWC" title="{WCModel>Arbpl}" description="{WCModel>WorkcenterDes}" />
+    </SelectDialog>
+</core:FragmentDefinition>

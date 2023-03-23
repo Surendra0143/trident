@@ -1,0 +1,13 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+	<smartfilterbar:ControlConfiguration id="idControlConfigurationDate" key="dateRange" index="1" label="{i18n>lblReportingPeriod}"
+		groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<DateRangeSelection id="dateRangeSelection" change="onReportingPeriodSelection"/>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

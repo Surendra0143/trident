@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="omaterialDialog" title="{i18n>material}({MaterialDetails>/length})" items="{MaterialDetails>/}" search=".onMaterialSearch" confirm=".onMaterialClose" cancel=".onMaterialClose">
+        <StandardListItem id="OMaterial" title="{MaterialDetails>Material}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

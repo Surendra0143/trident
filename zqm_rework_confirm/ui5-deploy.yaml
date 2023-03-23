@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: com.sap.rcp.zqmreworkconfirm
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: TSD_110
+          url: http://TSD:8012
+        app:
+          name: ZQM_REWORK_CONF
+          description: Rework Confirmation Punching
+          package: ZFIORI
+          transport: TSDK903992

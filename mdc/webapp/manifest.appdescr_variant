@@ -1,0 +1,50 @@
+{
+  "fileName": "manifest",
+  "layer": "CUSTOMER_BASE",
+  "fileType": "appdescr_variant",
+  "reference": "ehs.em.my.data.collects1",
+  "id": "customer.mdc",
+  "namespace": "apps/ehs.em.my.data.collects1/appVariants/customer.mdc/",
+  "content": [
+    {
+      "changeType": "appdescr_app_setTitle",
+      "content": {},
+      "texts": {
+        "i18n": "i18n/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ListReport|C_EHSMyDataCollection"
+      },
+      "texts": {
+        "i18n": "i18n/ListReport/C_EHSMyDataCollection/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ObjectPage|C_EHSMyDataCollection"
+      },
+      "texts": {
+        "i18n": "i18n/ObjectPage/C_EHSMyDataCollection/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ObjectPage|C_EHSMyDataCollectionAmounts"
+      },
+      "texts": {
+        "i18n": "i18n/ObjectPage/C_EHSMyDataCollectionAmounts/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_setMinUI5Version",
+      "content": {
+        "minUI5Version": "1.96.6"
+      }
+    }
+  ]
+}

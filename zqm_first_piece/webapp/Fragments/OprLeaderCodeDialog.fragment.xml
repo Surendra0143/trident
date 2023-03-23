@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="olcDialog" title="Operator Leader Code" items="{OprLeaderCode>/}" search=".onOprLeaderCodeSearch" confirm=".onOprLeaderCodeClose" cancel=".onOprLeaderCodeClose">
+        <StandardListItem id="OprLeaderCode" title="{OprLeaderCode>Username}" info="{OprLeaderCode>Description}" />
+    </SelectDialog>
+</core:FragmentDefinition>

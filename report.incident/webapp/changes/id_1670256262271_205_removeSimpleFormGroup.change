@@ -1,0 +1,43 @@
+{
+	"fileName": "id_1670256262271_205_removeSimpleFormGroup",
+	"fileType": "change",
+	"changeType": "removeSimpleFormGroup",
+	"moduleName": "",
+	"reference": "customer.report.incident",
+	"packageName": "$TMP",
+	"content": {
+		"elementSelector": {
+			"id": "createIncident--id-1670255175674-139",
+			"idIsLocal": true
+		}
+	},
+	"selector": {
+		"id": "createIncident--newIncidentForm",
+		"idIsLocal": true
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ehs.inc.reportincidents1/changes/",
+	"projectId": "customer.report.incident",
+	"creation": "2022-12-05T16:04:22.543Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "sap.ui.rta.command",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.96.5",
+		"sourceChangeFileName": "",
+		"compositeCommand": "id_1670256262271_206_composite",
+		"command": "remove"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"elementSelector": {
+			"id": "createIncident--id-1670255175674-139",
+			"idIsLocal": true
+		}
+	},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

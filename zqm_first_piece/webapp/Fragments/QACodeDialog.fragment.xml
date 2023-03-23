@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="oqaDialog" title="QA Code" items="{QACode>/}" search=".onQACodeSearch" confirm=".onQACodeClose" cancel=".onQACodeClose">
+        <StandardListItem id="QACode" title="{QACode>Username}" info="{QACode>Description}" />
+    </SelectDialog>
+</core:FragmentDefinition>

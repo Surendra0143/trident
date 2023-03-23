@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://tsd:8012/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZEHS_SUMMARY_INCIDENT_MGMT_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="Dummy" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DummyField"/>
+                </Key>
+                <Property Name="DummyField" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="File" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Content"/>
+                </Key>
+                <Property Name="Content" Type="Edm.Binary" Nullable="false" sap:unicode="false" sap:label="File Content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MimeCode" Type="Edm.String" Nullable="false" MaxLength="128" sap:unicode="false" sap:label="MIME type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Component name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="C_CurEHSLocationInclRootHierType" sap:label="Hierarchy for current rev. of EHS Loc." sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EHSLocationUUID"/>
+                </Key>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" Nullable="false" sap:label="Location"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location"/>
+                <Property Name="EHSLocationIDAndName" Type="Edm.String" MaxLength="132" sap:label="Text" sap:quickinfo="Text (length 132)" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationID" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="ID" sap:quickinfo="Location ID"/>
+                <Property Name="EHSLocationTypeText" Type="Edm.String" MaxLength="40" sap:label="Location Type" sap:quickinfo="Location Type Description"/>
+                <Property Name="EHSLocationStatus" Type="Edm.String" MaxLength="20" sap:label="Location Status"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant ID"/>
+                <Property Name="MyEHSLocationUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSParentLocationUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSLocationDrillStateString" Type="Edm.String" MaxLength="10" sap:label="Text" sap:quickinfo="Text (10 Characters)" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationType" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Location Type"/>
+                <Property Name="EHSLocationAuthorizationGroup" Type="Edm.String" MaxLength="21" sap:display-format="UpperCase" sap:label="Authorization Group" sap:quickinfo="Location Authorization Group"/>
+                <Property Name="CostCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Cost Center"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="BusinessArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Business Area"/>
+                <Property Name="EHSLocClassifiersText" Type="Edm.String" MaxLength="255" sap:label="Location Classifiers" sap:quickinfo="List of Classifiers (Comma Separated) - short"/>
+                <Property Name="EHSLocHierarchyNodeUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSLocHierarchyParentNodeUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="HierarchyLevel" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="C_EHSLocationValueHelpType" sap:label="EHS Locations Value Help" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EHSLocationUUID"/>
+                </Key>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" Nullable="false" sap:text="EHSLocationName" sap:label="Location"/>
+                <Property Name="EHSLocationNameFreeSrch" Type="Edm.String" MaxLength="60" sap:label="Location"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location"/>
+                <Property Name="EHSLocationIDAndName" Type="Edm.String" MaxLength="132" sap:label="Text" sap:quickinfo="Text (length 132)" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationID" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="ID"/>
+                <Property Name="EHSLocationType" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:text="EHSLocationType_Text" sap:label="Location Type"/>
+                <Property Name="EHSLocationType_Text" Type="Edm.String" MaxLength="40" sap:label="Type Description" sap:quickinfo="Location Type Description" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationStatus" Type="Edm.String" MaxLength="20" sap:label="Location Status"/>
+                <Property Name="EHSClassifierName" Type="Edm.String" MaxLength="255" sap:filter-restriction="single-value" sap:label="Text" sap:quickinfo="Text, 255 Characters"/>
+                <Property Name="EHSLocClassifiersText" Type="Edm.String" MaxLength="255" sap:label="Location Classifiers" sap:quickinfo="List of Classifiers (Comma Separated) - short"/>
+                <Property Name="EHSClassifiersLongText" Type="Edm.String" MaxLength="1333" sap:label="Location Classifiers" sap:quickinfo="List of Classifiers (Comma Separated)"/>
+                <Property Name="GeographicalLocationLatitude" Type="Edm.Decimal" Precision="15" Scale="12" sap:label="Latitude" sap:quickinfo="Geographic Latitude"/>
+                <Property Name="GeographicalLocationLongitude" Type="Edm.Decimal" Precision="15" Scale="12" sap:label="Longitude" sap:quickinfo="Geographic Longitude"/>
+            </EntityType>
+            <EntityType Name="C_FullEHSLocationInclRootHierType" sap:label="Hierarchy for current rev of all EHS Loc" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EHSLocationUUID"/>
+                </Key>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" Nullable="false" sap:label="Location"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location"/>
+                <Property Name="EHSLocationIDAndName" Type="Edm.String" MaxLength="132" sap:label="Text" sap:quickinfo="Text (length 132)" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationID" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="ID" sap:quickinfo="Location ID"/>
+                <Property Name="EHSLocationTypeText" Type="Edm.String" MaxLength="40" sap:label="Location Type" sap:quickinfo="Location Type Description"/>
+                <Property Name="EHSLocationStatus" Type="Edm.String" MaxLength="20" sap:label="Location Status"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant ID"/>
+                <Property Name="MyEHSLocationUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSParentLocationUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSLocationDrillStateString" Type="Edm.String" MaxLength="10" sap:label="Text" sap:quickinfo="Text (10 Characters)" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationType" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Location Type"/>
+                <Property Name="EHSLocationAuthorizationGroup" Type="Edm.String" MaxLength="21" sap:display-format="UpperCase" sap:label="Authorization Group" sap:quickinfo="Location Authorization Group"/>
+                <Property Name="CostCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Cost Center"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Company Code"/>
+                <Property Name="BusinessArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Business Area"/>
+                <Property Name="EHSLocClassifiersText" Type="Edm.String" MaxLength="255" sap:label="Location Classifiers" sap:quickinfo="List of Classifiers (Comma Separated) - short"/>
+                <Property Name="EHSLocHierarchyNodeUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="EHSLocHierarchyParentNodeUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="HierarchyLevel" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="C_SummaryReportReportTPType" sap:label="Summary Report Report node TP" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SummaryReportReportUUID"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="Generate_report_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NAICSCode_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OrganizationalUnit_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReasonForChangeText_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SmmryRptEstablishmentSizeCode_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SmmryRptEstablishmentTypeCode_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SmmryRptIndustryDescription_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SummaryReportReportUUID" Type="Edm.Guid" Nullable="false" sap:label="Summary Report Report"/>
+                <Property Name="SummaryReportRootUUID" Type="Edm.Guid" sap:label="Summary Report Root"/>
+                <Property Name="EHSReportFromDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date From"/>
+                <Property Name="EHSReportToDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date To"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant ID"/>
+                <Property Name="OrganizationalUnit" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:field-control="OrganizationalUnit_fc" sap:label="Organizational Unit ID"/>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" sap:text="EHSLocationName" sap:label="Location" sap:value-list="standard"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationNameFreeSrch" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="NAICSCode" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:field-control="NAICSCode_fc" sap:label="NAICS Code"/>
+                <Property Name="SmmryRptIndustryDescription" Type="Edm.String" MaxLength="300" sap:field-control="SmmryRptIndustryDescription_fc" sap:label="Industry Description"/>
+                <Property Name="SmmryRptEstablishmentSizeCode" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:field-control="SmmryRptEstablishmentSizeCode_fc" sap:label="Establishment Size" sap:value-list="fixed-values"/>
+                <Property Name="SmmryRptEstablishmentTypeCode" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:field-control="SmmryRptEstablishmentTypeCode_fc" sap:label="Establishment Type" sap:value-list="fixed-values"/>
+                <Property Name="ReasonForChangeText" Type="Edm.String" MaxLength="100" sap:field-control="ReasonForChangeText_fc" sap:label="Reason for Change"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_C15C5B458E37B4445FA5761B9C634575" FromRole="FromRole_assoc_C15C5B458E37B4445FA5761B9C634575" ToRole="ToRole_assoc_C15C5B458E37B4445FA5761B9C634575"/>
+                <NavigationProperty Name="SiblingEntity" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_0E10DA4765D9518C07DCF460401561A9" FromRole="FromRole_assoc_0E10DA4765D9518C07DCF460401561A9" ToRole="ToRole_assoc_0E10DA4765D9518C07DCF460401561A9"/>
+                <NavigationProperty Name="to_SummaryReportRootTP" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" FromRole="ToRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" ToRole="FromRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3"/>
+            </EntityType>
+            <EntityType Name="C_SummaryReportRootTPType" sap:label="Summary Report Root TP" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SummaryReportRootUUID"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="Activation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Language_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SummaryReportRootUUID" Type="Edm.Guid" Nullable="false" sap:label="Summary Report Root"/>
+                <Property Name="SummaryReportReportUUID" Type="Edm.Guid" sap:label="Summary Report Report" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CreationUTCDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Created On/At" sap:quickinfo="Object Created On/At"/>
+                <Property Name="EHSFormName" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:text="EHSFormDescription" sap:label="Form Type" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="EHSFormDescription" Type="Edm.String" MaxLength="60" sap:label="Form Title" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SummaryReportRootStatus" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="EHSReportStatusText" sap:label="Report Status" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportStatusText" Type="Edm.String" MaxLength="60" sap:label="Report Status" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" sap:field-control="Language_fc" sap:text="LanguageName" sap:label="Language" sap:value-list="standard"/>
+                <Property Name="LanguageName" Type="Edm.String" MaxLength="16" sap:label="Language" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" sap:text="EHSLocationName" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="LocHasChildLocationsSelected" Type="Edm.Boolean" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Include sublocations" sap:quickinfo="Checkbox" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationURL" Type="Edm.String" MaxLength="1024" sap:label="Case-Sensitive Length 1024" sap:heading="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationNameFreeSrch" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportFile" Type="Edm.String" MaxLength="1024" sap:label="Case-Sensitive Length 1024" sap:heading="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSFileGenerationDateTimeText" Type="Edm.String" MaxLength="100" sap:label="Text" sap:quickinfo="Text (100 characters)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSReportFromDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date From" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportToDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date To" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_C560D226876AF28BDE0197087AEBBC22" FromRole="FromRole_assoc_C560D226876AF28BDE0197087AEBBC22" ToRole="ToRole_assoc_C560D226876AF28BDE0197087AEBBC22"/>
+                <NavigationProperty Name="SiblingEntity" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_4D1A2CE009B3313BA897B3145922C556" FromRole="FromRole_assoc_4D1A2CE009B3313BA897B3145922C556" ToRole="ToRole_assoc_4D1A2CE009B3313BA897B3145922C556"/>
+                <NavigationProperty Name="to_EHSReportStatusText" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_2891D3766F3657918CDEFD9D762229F0" FromRole="FromRole_assoc_2891D3766F3657918CDEFD9D762229F0" ToRole="ToRole_assoc_2891D3766F3657918CDEFD9D762229F0"/>
+                <NavigationProperty Name="to_SummaryReportReport" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_1A0C5499F19A06B01257BD23E1A45D15" FromRole="FromRole_assoc_1A0C5499F19A06B01257BD23E1A45D15" ToRole="ToRole_assoc_1A0C5499F19A06B01257BD23E1A45D15"/>
+                <NavigationProperty Name="to_SummaryReportReportTP" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" FromRole="FromRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" ToRole="ToRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3"/>
+            </EntityType>
+            <EntityType Name="I_DraftAdministrativeDataType" sap:label="Draft Administration Data" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DraftUUID"/>
+                    <PropertyRef Name="DraftEntityType"/>
+                </Key>
+                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false" sap:label="Draft (Technical ID)"/>
+                <Property Name="DraftEntityType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Draft Entity ID"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="CreatedByUserDescription" sap:label="Draft Created By"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="LastChangedByUserDescription" sap:label="Draft Last Changed By"/>
+                <Property Name="DraftAccessType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Draft Access Type"/>
+                <Property Name="ProcessingStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft In Process Since"/>
+                <Property Name="InProcessByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="InProcessByUserDescription" sap:label="Draft In Process By"/>
+                <Property Name="DraftIsKeptByUser" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Is Kept By User"/>
+                <Property Name="EnqueueStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Locked Since"/>
+                <Property Name="DraftIsCreatedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Created By Me"/>
+                <Property Name="DraftIsLastChangedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Last Changed By Me"/>
+                <Property Name="DraftIsProcessedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft In Process By Me"/>
+                <Property Name="CreatedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Created By (Description)"/>
+                <Property Name="LastChangedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Last Changed By (Description)"/>
+                <Property Name="InProcessByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft In Process By (Description)"/>
+            </EntityType>
+            <EntityType Name="I_EHSReportStatusTextType" sap:label="Report Status Text" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                    <PropertyRef Name="EHSReportStatusCode"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:text="to_Language/Language_Text" sap:label="Language Key" sap:value-list="standard"/>
+                <Property Name="EHSReportStatusCode" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:text="EHSReportStatusText" sap:label="Report Status"/>
+                <Property Name="EHSReportStatusText" Type="Edm.String" MaxLength="60" sap:label="Report Status"/>
+                <NavigationProperty Name="to_Language" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0" FromRole="FromRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0" ToRole="ToRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0"/>
+            </EntityType>
+            <EntityType Name="I_IncidentReportFormDescType" sap:label="Forms Description" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                    <PropertyRef Name="EHSFormName"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Language Key"/>
+                <Property Name="EHSFormName" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="Form Name"/>
+                <Property Name="EHSFormDescription" Type="Edm.String" MaxLength="60" sap:label="Form Title"/>
+            </EntityType>
+            <EntityType Name="I_IncidentReportFormsType" sap:label="Incident Forms" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EHSFormName"/>
+                </Key>
+                <Property Name="EHSFormName" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:text="EHSFormName_Text" sap:label="Form Name"/>
+                <Property Name="EHSFormName_Text" Type="Edm.String" MaxLength="60" sap:label="Form Title" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSFormGroupName" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Form Group"/>
+            </EntityType>
+            <EntityType Name="I_IndicatorType" sap:label="Indicator" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IndicatorValue"/>
+                </Key>
+                <Property Name="IndicatorValue" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:text="IndicatorValue_Text" sap:label="Checkbox" sap:heading=""/>
+                <Property Name="IndicatorValue_Text" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_LanguageType" sap:label="Language" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:text="Language_Text" sap:label="Language Key"/>
+                <Property Name="Language_Text" Type="Edm.String" MaxLength="16" sap:label="Name" sap:quickinfo="Name of Language" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="LanguageISOCode" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Language Code" sap:quickinfo="2-Character SAP Language Code"/>
+                <NavigationProperty Name="to_Text" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_DAB3483923698C609058A2E35497F42C" FromRole="FromRole_assoc_DAB3483923698C609058A2E35497F42C" ToRole="ToRole_assoc_DAB3483923698C609058A2E35497F42C"/>
+            </EntityType>
+            <EntityType Name="I_LanguageTextType" sap:label="Language Text" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Language"/>
+                    <PropertyRef Name="LanguageCode"/>
+                </Key>
+                <Property Name="Language" Type="Edm.String" Nullable="false" MaxLength="2" sap:text="to_Language/Language_Text" sap:label="Language Key" sap:value-list="standard"/>
+                <Property Name="LanguageCode" Type="Edm.String" Nullable="false" MaxLength="2" sap:text="to_LanguageCode/Language_Text" sap:label="Language Key" sap:value-list="standard"/>
+                <Property Name="LanguageName" Type="Edm.String" MaxLength="16" sap:label="Name" sap:quickinfo="Name of Language"/>
+                <NavigationProperty Name="to_Language" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_FBAD09C202DB92261094F09949995622" FromRole="FromRole_assoc_FBAD09C202DB92261094F09949995622" ToRole="ToRole_assoc_FBAD09C202DB92261094F09949995622"/>
+                <NavigationProperty Name="to_LanguageCode" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_E3E085D6104487FE371705EE65EA4511" FromRole="FromRole_assoc_E3E085D6104487FE371705EE65EA4511" ToRole="ToRole_assoc_E3E085D6104487FE371705EE65EA4511"/>
+            </EntityType>
+            <EntityType Name="I_SummaryReportEstblmtSizeVHType" sap:label="Summ. Rep. Establishment Size Value Help" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SmmryRptEstablishmentSizeCode"/>
+                </Key>
+                <Property Name="SmmryRptEstablishmentSizeCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="NonNegative" sap:text="SmmryRptEstablishmentSizeCode_Text" sap:label="Establishment Size"/>
+                <Property Name="SmmryRptEstablishmentSizeCode_Text" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_SummaryReportEstblmtTypeVHType" sap:label="Summ. Rep. Establishment Type Value Help" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SmmryRptEstablishmentTypeCode"/>
+                </Key>
+                <Property Name="SmmryRptEstablishmentTypeCode" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="NonNegative" sap:text="SmmryRptEstablishmentTypeCode_Text" sap:label="Establishment Type"/>
+                <Property Name="SmmryRptEstablishmentTypeCode_Text" Type="Edm.String" MaxLength="60" sap:label="Short Description" sap:quickinfo="Short Text for Fixed Values" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_SummaryReportReportType" sap:label="Summary Report" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SummaryReportReportUUID"/>
+                </Key>
+                <Property Name="SummaryReportReportUUID" Type="Edm.Guid" Nullable="false" sap:label="Summary Report Report"/>
+                <Property Name="SummaryReportRootUUID" Type="Edm.Guid" sap:label="Summary Report Root"/>
+                <Property Name="CreationUTCDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Created On/At" sap:quickinfo="Object Created On/At"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Created By"/>
+                <Property Name="LastChangeUTCDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Changed On/At" sap:quickinfo="Object Changed On/At"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Last Changed By" sap:quickinfo="Last Change By"/>
+                <Property Name="EHSReportFromDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date From"/>
+                <Property Name="EHSReportToDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date To"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Plant ID"/>
+                <Property Name="OrganizationalUnit" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Organizational Unit ID"/>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" sap:label="Location"/>
+                <Property Name="SmmryRptIndustryDescription" Type="Edm.String" MaxLength="300" sap:label="Industry Description"/>
+                <Property Name="NAICSCode" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="NAICS Code"/>
+                <Property Name="SmmryRptEstablishmentSizeCode" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:label="Establishment Size"/>
+                <Property Name="SmmryRptEstablishmentTypeCode" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:label="Establishment Type"/>
+                <Property Name="ReasonForChangeText" Type="Edm.String" MaxLength="100" sap:label="Reason for Change"/>
+            </EntityType>
+            <EntityType Name="ZC_INCIDENTREPORT_FORMSType" sap:label="Incident Forms" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EHSFormName"/>
+                </Key>
+                <Property Name="EHSFormName" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:text="EHSFormName_Text" sap:label="Form Name"/>
+                <Property Name="EHSFormName_Text" Type="Edm.String" MaxLength="60" sap:label="Form Title" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSFormGroupName" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Form Group"/>
+            </EntityType>
+            <EntityType Name="ZC_SUMMARYREPORT_TPType" sap:label="Summary Report Report node TP" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SummaryReportRootUUID"/>
+                </Key>
+                <Property Name="Language_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SummaryReportRootUUID" Type="Edm.Guid" Nullable="false" sap:label="Summary Report Root"/>
+                <Property Name="SummaryReportReportUUID" Type="Edm.Guid" sap:label="Summary Report Report" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="CreationUTCDateTime" Type="Edm.DateTimeOffset" Precision="0" sap:label="Created On/At" sap:quickinfo="Object Created On/At"/>
+                <Property Name="EHSFormName" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:text="EHSFormDescription" sap:label="Form Type" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="EHSFormDescription" Type="Edm.String" MaxLength="60" sap:label="Form Title" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="SummaryReportRootStatus" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:text="EHSReportStatusText" sap:label="Report Status" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportStatusText" Type="Edm.String" MaxLength="60" sap:label="Report Status" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Language" Type="Edm.String" MaxLength="2" sap:field-control="Language_fc" sap:text="LanguageName" sap:label="Language" sap:value-list="standard"/>
+                <Property Name="LanguageName" Type="Edm.String" MaxLength="16" sap:label="Language" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationUUID" Type="Edm.Guid" sap:text="EHSLocationName" sap:label="Location" sap:creatable="false" sap:updatable="false" sap:value-list="standard"/>
+                <Property Name="LocHasChildLocationsSelected" Type="Edm.Boolean" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Include sublocations" sap:quickinfo="Checkbox" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="EHSLocationName" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSLocationURL" Type="Edm.String" MaxLength="1024" sap:label="Case-Sensitive Length 1024" sap:heading="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSLocationNameFreeSrch" Type="Edm.String" MaxLength="60" sap:label="Location" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportFile" Type="Edm.String" MaxLength="1024" sap:label="Case-Sensitive Length 1024" sap:heading="" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSFileGenerationDateTimeText" Type="Edm.String" MaxLength="100" sap:label="Text" sap:quickinfo="Text (100 characters)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EHSReportFromDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date From" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EHSReportToDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Date To" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="to_EHSReportStatusText" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_7EBA9576F29D93D13E7C83EC37D53B2E" FromRole="FromRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E" ToRole="ToRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E"/>
+                <NavigationProperty Name="to_SummaryReportReport" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_DC79E1E76F422B58AB516F974AF93E18" FromRole="FromRole_assoc_DC79E1E76F422B58AB516F974AF93E18" ToRole="ToRole_assoc_DC79E1E76F422B58AB516F974AF93E18"/>
+                <NavigationProperty Name="to_SummaryReportReportTP" Relationship="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_B9A0E0F37E1E4893BE7280241607EF5B" FromRole="FromRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B" ToRole="ToRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B"/>
+            </EntityType>
+            <ComplexType Name="DummyFunctionImportResult">
+                <Property Name="IsInvalid" Type="Edm.Boolean" sap:label="TRUE"/>
+            </ComplexType>
+            <ComplexType Name="ValidationFunctionResult">
+                <Property Name="IsValid" Type="Edm.Boolean" sap:label="Is valid"/>
+            </ComplexType>
+            <Association Name="assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_EHSReportStatusTextType" Multiplicity="1" Role="FromRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageType" Multiplicity="0..1" Role="ToRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0">
+                        <PropertyRef Name="Language"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0">
+                        <PropertyRef Name="Language"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_7EBA9576F29D93D13E7C83EC37D53B2E" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" Multiplicity="1" Role="FromRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_EHSReportStatusTextType" Multiplicity="*" Role="ToRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E"/>
+            </Association>
+            <Association Name="assoc_DC79E1E76F422B58AB516F974AF93E18" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" Multiplicity="1" Role="FromRole_assoc_DC79E1E76F422B58AB516F974AF93E18"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_SummaryReportReportType" Multiplicity="1" Role="ToRole_assoc_DC79E1E76F422B58AB516F974AF93E18"/>
+            </Association>
+            <Association Name="assoc_B9A0E0F37E1E4893BE7280241607EF5B" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" Multiplicity="1" Role="FromRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B">
+                    <OnDelete Action="Cascade"/>
+                </End>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" Multiplicity="1" Role="ToRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B">
+                        <PropertyRef Name="SummaryReportRootUUID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B">
+                        <PropertyRef Name="SummaryReportRootUUID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_C560D226876AF28BDE0197087AEBBC22" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="1" Role="FromRole_assoc_C560D226876AF28BDE0197087AEBBC22"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_C560D226876AF28BDE0197087AEBBC22"/>
+            </Association>
+            <Association Name="assoc_4D1A2CE009B3313BA897B3145922C556" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="1" Role="FromRole_assoc_4D1A2CE009B3313BA897B3145922C556"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="0..1" Role="ToRole_assoc_4D1A2CE009B3313BA897B3145922C556"/>
+            </Association>
+            <Association Name="assoc_2891D3766F3657918CDEFD9D762229F0" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="1" Role="FromRole_assoc_2891D3766F3657918CDEFD9D762229F0"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_EHSReportStatusTextType" Multiplicity="*" Role="ToRole_assoc_2891D3766F3657918CDEFD9D762229F0"/>
+            </Association>
+            <Association Name="assoc_1A0C5499F19A06B01257BD23E1A45D15" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="1" Role="FromRole_assoc_1A0C5499F19A06B01257BD23E1A45D15"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_SummaryReportReportType" Multiplicity="0..1" Role="ToRole_assoc_1A0C5499F19A06B01257BD23E1A45D15"/>
+            </Association>
+            <Association Name="assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" Multiplicity="1" Role="FromRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3">
+                    <OnDelete Action="Cascade"/>
+                </End>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" Multiplicity="0..1" Role="ToRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3">
+                        <PropertyRef Name="SummaryReportRootUUID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3">
+                        <PropertyRef Name="SummaryReportRootUUID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_DAB3483923698C609058A2E35497F42C" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageType" Multiplicity="1" Role="FromRole_assoc_DAB3483923698C609058A2E35497F42C"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType" Multiplicity="*" Role="ToRole_assoc_DAB3483923698C609058A2E35497F42C"/>
+            </Association>
+            <Association Name="assoc_0E10DA4765D9518C07DCF460401561A9" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" Multiplicity="1" Role="FromRole_assoc_0E10DA4765D9518C07DCF460401561A9"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" Multiplicity="0..1" Role="ToRole_assoc_0E10DA4765D9518C07DCF460401561A9"/>
+            </Association>
+            <Association Name="assoc_C15C5B458E37B4445FA5761B9C634575" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" Multiplicity="1" Role="FromRole_assoc_C15C5B458E37B4445FA5761B9C634575"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_C15C5B458E37B4445FA5761B9C634575"/>
+            </Association>
+            <Association Name="assoc_FBAD09C202DB92261094F09949995622" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType" Multiplicity="1" Role="FromRole_assoc_FBAD09C202DB92261094F09949995622"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageType" Multiplicity="0..1" Role="ToRole_assoc_FBAD09C202DB92261094F09949995622"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_FBAD09C202DB92261094F09949995622">
+                        <PropertyRef Name="Language"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_FBAD09C202DB92261094F09949995622">
+                        <PropertyRef Name="Language"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_E3E085D6104487FE371705EE65EA4511" sap:content-version="1">
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType" Multiplicity="1" Role="FromRole_assoc_E3E085D6104487FE371705EE65EA4511"/>
+                <End Type="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageType" Multiplicity="0..1" Role="ToRole_assoc_E3E085D6104487FE371705EE65EA4511"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_E3E085D6104487FE371705EE65EA4511">
+                        <PropertyRef Name="Language"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_E3E085D6104487FE371705EE65EA4511">
+                        <PropertyRef Name="LanguageCode"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="DummyCollection" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.Dummy" sap:content-version="1"/>
+                <EntitySet Name="FileSet" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.File" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="C_CurEHSLocationInclRootHier" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_CurEHSLocationInclRootHierType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="C_EHSLocationValueHelp" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_EHSLocationValueHelpType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="C_FullEHSLocationInclRootHier" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_FullEHSLocationInclRootHierType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="C_SummaryReportReportTP" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" sap:creatable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="C_SummaryReportRootTP" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" sap:creatable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_DraftAdministrativeData" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_DraftAdministrativeDataType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="I_EHSReportStatusText" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_EHSReportStatusTextType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_IncidentReportFormDesc" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_IncidentReportFormDescType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_IncidentReportForms" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_IncidentReportFormsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_Indicator" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_IndicatorType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_Language" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_LanguageText" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_SummaryReportEstblmtSizeVH" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_SummaryReportEstblmtSizeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_SummaryReportEstblmtTypeVH" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_SummaryReportEstblmtTypeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_SummaryReportReport" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_SummaryReportReportType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_INCIDENTREPORT_FORMS" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_INCIDENTREPORT_FORMSType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_SUMMARYREPORT_TP" EntityType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" sap:creatable="false" sap:searchable="true" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_4D1A2CE009B3313BA897B3145922C556" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_4D1A2CE009B3313BA897B3145922C556" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportRootTP" Role="FromRole_assoc_4D1A2CE009B3313BA897B3145922C556"/>
+                    <End EntitySet="C_SummaryReportRootTP" Role="ToRole_assoc_4D1A2CE009B3313BA897B3145922C556"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_1A0C5499F19A06B01257BD23E1A45D15" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_1A0C5499F19A06B01257BD23E1A45D15" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportRootTP" Role="FromRole_assoc_1A0C5499F19A06B01257BD23E1A45D15"/>
+                    <End EntitySet="I_SummaryReportReport" Role="ToRole_assoc_1A0C5499F19A06B01257BD23E1A45D15"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_C15C5B458E37B4445FA5761B9C634575" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_C15C5B458E37B4445FA5761B9C634575" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportReportTP" Role="FromRole_assoc_C15C5B458E37B4445FA5761B9C634575"/>
+                    <End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_C15C5B458E37B4445FA5761B9C634575"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="I_EHSReportStatusText" Role="FromRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0"/>
+                    <End EntitySet="I_Language" Role="ToRole_assoc_87FCBAB8C09A403DE4C93CBB1A22A1A0"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_E3E085D6104487FE371705EE65EA4511" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_E3E085D6104487FE371705EE65EA4511" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="I_LanguageText" Role="FromRole_assoc_E3E085D6104487FE371705EE65EA4511"/>
+                    <End EntitySet="I_Language" Role="ToRole_assoc_E3E085D6104487FE371705EE65EA4511"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_DAB3483923698C609058A2E35497F42C" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_DAB3483923698C609058A2E35497F42C" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="I_Language" Role="FromRole_assoc_DAB3483923698C609058A2E35497F42C"/>
+                    <End EntitySet="I_LanguageText" Role="ToRole_assoc_DAB3483923698C609058A2E35497F42C"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_6EECAC51361E67210B8FD7C2C6FF3FA3" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportRootTP" Role="FromRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3"/>
+                    <End EntitySet="C_SummaryReportReportTP" Role="ToRole_assoc_6EECAC51361E67210B8FD7C2C6FF3FA3"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_7EBA9576F29D93D13E7C83EC37D53B2E" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_7EBA9576F29D93D13E7C83EC37D53B2E" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SUMMARYREPORT_TP" Role="FromRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E"/>
+                    <End EntitySet="I_EHSReportStatusText" Role="ToRole_assoc_7EBA9576F29D93D13E7C83EC37D53B2E"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_DC79E1E76F422B58AB516F974AF93E18" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_DC79E1E76F422B58AB516F974AF93E18" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SUMMARYREPORT_TP" Role="FromRole_assoc_DC79E1E76F422B58AB516F974AF93E18"/>
+                    <End EntitySet="I_SummaryReportReport" Role="ToRole_assoc_DC79E1E76F422B58AB516F974AF93E18"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_FBAD09C202DB92261094F09949995622" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_FBAD09C202DB92261094F09949995622" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="I_LanguageText" Role="FromRole_assoc_FBAD09C202DB92261094F09949995622"/>
+                    <End EntitySet="I_Language" Role="ToRole_assoc_FBAD09C202DB92261094F09949995622"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_C560D226876AF28BDE0197087AEBBC22" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_C560D226876AF28BDE0197087AEBBC22" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportRootTP" Role="FromRole_assoc_C560D226876AF28BDE0197087AEBBC22"/>
+                    <End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_C560D226876AF28BDE0197087AEBBC22"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_B9A0E0F37E1E4893BE7280241607EF5B" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_B9A0E0F37E1E4893BE7280241607EF5B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZC_SUMMARYREPORT_TP" Role="FromRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B"/>
+                    <End EntitySet="C_SummaryReportReportTP" Role="ToRole_assoc_B9A0E0F37E1E4893BE7280241607EF5B"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_2891D3766F3657918CDEFD9D762229F0" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_2891D3766F3657918CDEFD9D762229F0" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportRootTP" Role="FromRole_assoc_2891D3766F3657918CDEFD9D762229F0"/>
+                    <End EntitySet="I_EHSReportStatusText" Role="ToRole_assoc_2891D3766F3657918CDEFD9D762229F0"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_0E10DA4765D9518C07DCF460401561A9" Association="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.assoc_0E10DA4765D9518C07DCF460401561A9" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="C_SummaryReportReportTP" Role="FromRole_assoc_0E10DA4765D9518C07DCF460401561A9"/>
+                    <End EntitySet="C_SummaryReportReportTP" Role="ToRole_assoc_0E10DA4765D9518C07DCF460401561A9"/>
+                </AssociationSet>
+                <FunctionImport Name="C_SummaryReportReportTPGenerate_report" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" sap:applicable-path="Generate_report_ac">
+                    <Parameter Name="SummaryReportReportUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Report"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportReportTPPreparation" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" EntitySet="C_SummaryReportReportTP" m:HttpMethod="POST" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" sap:applicable-path="Preparation_ac">
+                    <Parameter Name="SummaryReportReportUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Report"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true" sap:label="SideEffectsQualifier"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportReportTPValidation" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ValidationFunctionResult" m:HttpMethod="GET" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" sap:applicable-path="Validation_ac">
+                    <Parameter Name="SummaryReportReportUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Report"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true" sap:label="SideEffectsQualifier"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportRootTPActivation" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" EntitySet="C_SummaryReportRootTP" m:HttpMethod="POST" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" sap:applicable-path="Activation_ac">
+                    <Parameter Name="SummaryReportRootUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Root"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportRootTPCreate_smr_rpt" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" EntitySet="C_SummaryReportRootTP" m:HttpMethod="POST">
+                    <Parameter Name="EHSFormName" Type="Edm.String" Mode="In" MaxLength="20" sap:label="Form Name"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportRootTPEdit" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" EntitySet="C_SummaryReportRootTP" m:HttpMethod="POST" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" sap:applicable-path="Edit_ac">
+                    <Parameter Name="SummaryReportRootUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Root"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="PreserveChanges" Type="Edm.Boolean" Mode="In" Nullable="true" sap:label="TRUE"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportRootTPPreparation" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" EntitySet="C_SummaryReportRootTP" m:HttpMethod="POST" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" sap:applicable-path="Preparation_ac">
+                    <Parameter Name="SummaryReportRootUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Root"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true" sap:label="SideEffectsQualifier"/>
+                </FunctionImport>
+                <FunctionImport Name="C_SummaryReportRootTPValidation" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ValidationFunctionResult" m:HttpMethod="GET" sap:action-for="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" sap:applicable-path="Validation_ac">
+                    <Parameter Name="SummaryReportRootUUID" Type="Edm.Guid" Mode="In" sap:label="Summary Report Root"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true" sap:label="SideEffectsQualifier"/>
+                </FunctionImport>
+                <FunctionImport Name="ZC_SUMMARYREPORT_TPCreate_smr_rpt" ReturnType="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" EntitySet="ZC_SUMMARYREPORT_TP" m:HttpMethod="POST">
+                    <Parameter Name="EHSFormName" Type="Edm.String" Mode="In" MaxLength="20" sap:label="Form Name"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.DraftRoot">
+                    <Record>
+                        <PropertyValue Property="ActivationAction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTPActivation"/>
+                        <PropertyValue Property="EditAction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTPEdit"/>
+                        <PropertyValue Property="PreparationAction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTPPreparation"/>
+                        <PropertyValue Property="ValidationFunction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTPValidation"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Activation_ac</PropertyPath>
+                                <PropertyPath>Edit_ac</PropertyPath>
+                                <PropertyPath>Preparation_ac</PropertyPath>
+                                <PropertyPath>Validation_ac</PropertyPath>
+                                <PropertyPath>Language_fc</PropertyPath>
+                                <PropertyPath>EHSLocationURL</PropertyPath>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                                <PropertyPath>EHSFileGenerationDateTimeText</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="LocHasChildLocationsSelected"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Activation_ac</PropertyPath>
+                                <PropertyPath>Edit_ac</PropertyPath>
+                                <PropertyPath>Preparation_ac</PropertyPath>
+                                <PropertyPath>Validation_ac</PropertyPath>
+                                <PropertyPath>Language_fc</PropertyPath>
+                                <PropertyPath>EHSLocationURL</PropertyPath>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                                <PropertyPath>EHSFileGenerationDateTimeText</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportReportTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.DraftNode">
+                    <Record>
+                        <PropertyValue Property="PreparationAction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportReportTPPreparation"/>
+                        <PropertyValue Property="ValidationFunction" String="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportReportTPValidation"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.DraftActivationVia">
+                    <Collection>
+                        <String>ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_SummaryReportRootTP</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Generate_report_ac</PropertyPath>
+                                <PropertyPath>Preparation_ac</PropertyPath>
+                                <PropertyPath>Validation_ac</PropertyPath>
+                                <PropertyPath>NAICSCode_fc</PropertyPath>
+                                <PropertyPath>OrganizationalUnit_fc</PropertyPath>
+                                <PropertyPath>ReasonForChangeText_fc</PropertyPath>
+                                <PropertyPath>SmmryRptEstablishmentSizeCode_fc</PropertyPath>
+                                <PropertyPath>SmmryRptEstablishmentTypeCode_fc</PropertyPath>
+                                <PropertyPath>SmmryRptIndustryDescription_fc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Generate_report_ac</PropertyPath>
+                                <PropertyPath>Preparation_ac</PropertyPath>
+                                <PropertyPath>Validation_ac</PropertyPath>
+                                <PropertyPath>NAICSCode_fc</PropertyPath>
+                                <PropertyPath>OrganizationalUnit_fc</PropertyPath>
+                                <PropertyPath>ReasonForChangeText_fc</PropertyPath>
+                                <PropertyPath>SmmryRptEstablishmentSizeCode_fc</PropertyPath>
+                                <PropertyPath>SmmryRptEstablishmentTypeCode_fc</PropertyPath>
+                                <PropertyPath>SmmryRptIndustryDescription_fc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSLocationUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="EHS Locations Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="C_EHSLocationValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="EHSLocationUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationUUID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationNameFreeSrch"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationType_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationStatus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifierName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocClassifiersText"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifiersLongText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/SmmryRptEstablishmentSizeCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Summ. Rep. Establishment Size Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="I_SummaryReportEstblmtSizeVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SmmryRptEstablishmentSizeCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="SmmryRptEstablishmentSizeCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SmmryRptEstablishmentSizeCode_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/SmmryRptEstablishmentTypeCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Summ. Rep. Establishment Type Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="I_SummaryReportEstblmtTypeVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="SmmryRptEstablishmentTypeCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="SmmryRptEstablishmentTypeCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="SmmryRptEstablishmentTypeCode_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSFormName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Incident Forms"/>
+                        <PropertyValue Property="CollectionPath" String="I_IncidentReportForms"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="EHSFormName"/>
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormName_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormGroupName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Language"/>
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Language"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LanguageISOCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSLocationUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="EHS Locations Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="C_EHSLocationValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="EHSLocationUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationUUID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationNameFreeSrch"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationType_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationStatus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifierName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocClassifiersText"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifiersLongText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/LocHasChildLocationsSelected" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Indicator"/>
+                        <PropertyValue Property="CollectionPath" String="I_Indicator"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="LocHasChildLocationsSelected"/>
+                                    <PropertyValue Property="ValueListProperty" String="IndicatorValue"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IndicatorValue_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_EHSReportStatusTextType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Language"/>
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Language"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Language"/>
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Language"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.I_LanguageTextType/LanguageCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Language"/>
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="LanguageCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSFormName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Incident Forms"/>
+                        <PropertyValue Property="CollectionPath" String="I_IncidentReportForms"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="EHSFormName"/>
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormName_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSFormGroupName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/Language" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Language"/>
+                        <PropertyValue Property="CollectionPath" String="I_Language"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Language"/>
+                                    <PropertyValue Property="ValueListProperty" String="Language"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Language_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LanguageISOCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSLocationUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="EHS Locations Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="C_EHSLocationValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="EHSLocationUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationUUID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationNameFreeSrch"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationType_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocationStatus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifierName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSLocClassifiersText"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="EHSClassifiersLongText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/LocHasChildLocationsSelected" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Indicator"/>
+                        <PropertyValue Property="CollectionPath" String="I_Indicator"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="LocHasChildLocationsSelected"/>
+                                    <PropertyValue Property="ValueListProperty" String="IndicatorValue"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IndicatorValue_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSReportFromDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType/EHSReportToDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSReportFromDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType/EHSReportToDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSReportFromDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType/EHSReportToDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_CurEHSLocationInclRootHier" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                                <PropertyPath>EHSLocationDrillStateString</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                                <PropertyPath>EHSLocationDrillStateString</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_EHSLocationValueHelp" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="EHSClassifierName"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/C_FullEHSLocationInclRootHier" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                                <PropertyPath>EHSLocationDrillStateString</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>EHSLocationIDAndName</PropertyPath>
+                                <PropertyPath>EHSLocationDrillStateString</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZEHS_SUMMARY_INCIDENT_MGMT_SRV_Entities/ZC_SUMMARYREPORT_TP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>Language_fc</PropertyPath>
+                                <PropertyPath>EHSLocationURL</PropertyPath>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                                <PropertyPath>EHSFileGenerationDateTimeText</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="LocHasChildLocationsSelected"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>Language_fc</PropertyPath>
+                                <PropertyPath>EHSLocationURL</PropertyPath>
+                                <PropertyPath>EHSReportFile</PropertyPath>
+                                <PropertyPath>EHSFileGenerationDateTimeText</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportReportTPType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>SummaryReportReportUUID</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.C_SummaryReportRootTPType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>EHSFormName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZEHS_SUMMARY_INCIDENT_MGMT_SRV.ZC_SUMMARYREPORT_TPType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>SummaryReportReportUUID</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://tsd:8012/sap/opu/odata/sap/ZEHS_SUMMARY_INCIDENT_MGMT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://tsd:8012/sap/opu/odata/sap/ZEHS_SUMMARY_INCIDENT_MGMT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

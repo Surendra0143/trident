@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="oRforRDialog" title="{i18n>RforR}({ReaFrRejcn>/length})" items="{ReaFrRejcn>/}" search=".onRforRSearch" confirm=".onRforRClose" cancel=".onRforRClose">
+        <StandardListItem id="ORforR" title="{ReaFrRejcn>Lineid}" description="{ReaFrRejcn>ReasonRejection}"/>
+    </SelectDialog>
+</core:FragmentDefinition>

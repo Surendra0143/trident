@@ -1,0 +1,41 @@
+{
+  "fileName": "manifest",
+  "layer": "CUSTOMER_BASE",
+  "fileType": "appdescr_variant",
+  "reference": "ehs.inc.smr_rpt.generates1",
+  "id": "customer.zqmsmr",
+  "namespace": "apps/ehs.inc.smr_rpt.generates1/appVariants/customer.zqmsmr/",
+  "content": [
+    {
+      "changeType": "appdescr_app_setTitle",
+      "content": {},
+      "texts": {
+        "i18n": "i18n/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ListReport|C_SummaryReportRootTP"
+      },
+      "texts": {
+        "i18n": "i18n/ListReport/C_SummaryReportRootTP/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ObjectPage|C_SummaryReportRootTP"
+      },
+      "texts": {
+        "i18n": "i18n/ObjectPage/C_SummaryReportRootTP/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_setMinUI5Version",
+      "content": {
+        "minUI5Version": "1.96.6"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <SelectDialog id="sDialog" title="Sales Orders" items="{SalesOrderModel>/}" search=".onSOValueHelpSearch" confirm=".onSOValueHelpClose" cancel=".onSOValueHelpClose">
+        <StandardListItem id="_IDGenStandardListItem1" title="{SalesOrderModel>Salesorder}" description="{SalesOrderModel>Salesitem}" />
+    </SelectDialog>
+</core:FragmentDefinition>
